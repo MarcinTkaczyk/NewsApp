@@ -13,7 +13,6 @@ public class Main {
             if(headlines!=null) {
                 Scanner scanner = new Scanner(System.in);
                 System.out.println("Please provide full file path:");
-                //String path = "/Users/marcintkaczyk/Documents/news.txt";
                 String path = scanner.nextLine();
                 WriterService.writeToFile(Path.of(path), headlines);
             }
