@@ -11,7 +11,7 @@ import java.nio.file.Path;
 
 public class WriterService {
     public static void writeToFile(Path path, Headlines headlines){
-       try (BufferedWriter writer = Files.newBufferedWriter(path, StandardCharsets.UTF_8);){
+       try (BufferedWriter writer = Files.newBufferedWriter(path, StandardCharsets.UTF_8)){
            for(Article article : headlines.getArticles()){
                writer.write(article.getTitle()+":"+article.getDescription()+":"+article.getAuthor());
                writer.newLine();
